@@ -10,18 +10,18 @@ export const trustPoints: TrustPoint[] = [
     id: 'devis-gratuit',
     title: 'Devis gratuit et transparent',
     description: 'Estimation détaillée sans engagement',
-    icon: 'icon-document'
+    icon: 'https://raw.githubusercontent.com/tailwindlabs/heroicons/master/optimized/24/outline/document-text.svg'
   },
   {
     id: 'respect-delais',
     title: 'Respect rigoureux des délais',
     description: 'Planification précise et tenue des engagements',
-    icon: 'icon-clock'
+    icon: 'https://raw.githubusercontent.com/tailwindlabs/heroicons/master/optimized/24/outline/clock.svg'
   },
   {
     id: 'accompagnement',
     title: 'Accompagnement personnalisé',
     description: 'Suivi de projet de A à Z',
-    icon: 'icon-support'
+    icon: 'https://raw.githubusercontent.com/tailwindlabs/heroicons/master/optimized/24/outline/users.svg'
   }
 ];

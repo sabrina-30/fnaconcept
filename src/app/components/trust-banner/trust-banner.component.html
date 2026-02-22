@@ -4,9 +4,14 @@
     <div 
       *ngFor="let point of trustPoints" 
       class="flex flex-col items-center text-center max-w-sm">
-      <div class="w-16 h-16 bg-fna-warm rounded-full flex items-center justify-center mb-4">
-        <span class="text-white text-2xl font-bold">{{ point.icon }}</span>
-      </div>
+      <div class="mb-4 p-4 bg-orange-100 rounded-full">
+    <img 
+      [src]="point.icon" 
+      [alt]="point.title" 
+      class="w-10 h-10 object-contain"
+      style="filter: invert(47%) sepia(87%) saturate(1637%) hue-rotate(15deg) brightness(96%) contrast(98%);" 
+    />
+  </div>
       <h3 class="text-xl font-semibold text-fna-charcoal mb-2">{{ point.title }}</h3>
       <p class="text-fna-slate">{{ point.description }}</p>
     </div>

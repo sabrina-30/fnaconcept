@@ -1,7 +1,18 @@
-<div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
-  <div class="flex items-center justify-center w-16 h-16 bg-fna-warm bg-opacity-10 rounded-lg mb-4">
-    <span class="text-fna-warm text-2xl font-bold">{{ service.icon }}</span>
+<div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full flex flex-col">
+  
+  <div class="h-48 w-full overflow-hidden">
+    <img 
+      [src]="service.imageUrl" 
+      [alt]="service.name" 
+      class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+      loading="lazy"
+    >
   </div>
-  <h3 class="text-xl font-semibold text-fna-charcoal mb-3">{{ service.name }}</h3>
-  <p class="text-fna-slate text-base leading-relaxed">{{ service.description }}</p>
+
+  <div class="p-6 flex flex-col flex-grow">
+    <h3 class="text-xl font-bold text-fna-charcoal mb-3">{{ service.name }}</h3>
+    <p class="text-gray-600 leading-relaxed flex-grow">
+      {{ service.description }}
+    </p>
+  </div>
 </div>

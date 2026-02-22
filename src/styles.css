@@ -1,21 +1,14 @@
-@import "tailwindcss";
-
-@theme {
-  --color-fna-charcoal: #2d3748;
-  --color-fna-slate: #64748b;
-  --color-fna-warm: #d97706;
-  
-  --font-family-sans: Inter, system-ui, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
-  
   body {
-    font-family: var(--font-family-sans);
-    color: var(--color-fna-charcoal);
+    font-family: Inter, system-ui, sans-serif;
+    @apply text-fna-charcoal;
   }
 }
 

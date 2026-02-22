@@ -1,26 +1,18 @@
 <section id="about" class="section-container" aria-labelledby="about-title">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-    <!-- Text Content -->
     <div class="order-1">
-      <h2 id="about-title" class="section-title">{{ sectionTitle }}</h2>
-      <p class="text-lg text-gray-700 leading-relaxed">
+      <h2 id="about-title" class="section-title text-left">{{ sectionTitle }}</h2>
+      <p class="text-lg text-gray-700 leading-relaxed text-justify">
         {{ companyDescription }}
       </p>
     </div>
     
-    <!-- Image -->
     <div class="order-2">
       <img 
-        src="assets/images/about-image.jpg" 
+        src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1000&auto=format&fit=crop" 
         [alt]="imageAlt"
         loading="lazy"
         class="w-full h-auto rounded-lg shadow-lg object-cover" />
-      <!-- Future enhancement: Add srcset for responsive images
-      srcset="assets/images/about-image-small.jpg 400w,
-              assets/images/about-image-medium.jpg 600w,
-              assets/images/about-image-large.jpg 800w"
-      sizes="(max-width: 768px) 100vw, 50vw"
-      -->
     </div>
   </div>
 </section>
