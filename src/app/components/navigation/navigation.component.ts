@@ -20,7 +20,7 @@ export class NavigationComponent {
   navItems: NavItem[] = [
     { label: 'Accueil', targetId: 'hero' },
     { label: 'À propos', targetId: 'about' },
-    { label: 'Nos Services', targetId: 'services' },
+    { label: 'Nos services', targetId: 'services' },
     { label: 'Réalisations', targetId: 'realizations' },
     { label: 'Contact', targetId: 'contact' }
   ];
