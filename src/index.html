@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>FNA Concept - Rénovation intérieure en Île-de-France</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FNA Concept, votre expert en rénovation intérieure en Île-de-France. Maçonnerie, peinture, plâtrerie, électricité et plomberie. Devis gratuit.">
+  <meta name="keywords" content="rénovation, intérieur, Île-de-France, maçonnerie, peinture, plâtrerie, électricité, plomberie">
+  <meta name="author" content="FNA Concept">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="FNA Concept - Rénovation intérieure en Île-de-France">
+  <meta property="og:description" content="Votre partenaire rénovation de confiance. Devis gratuit et transparent.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Preconnect to external resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+  <!-- Hidden form for Netlify Forms detection (required for Angular SPA) -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="text" name="nom" />
+    <input type="text" name="prenom" />
+    <input type="email" name="email" />
+    <input type="tel" name="telephone" />
+    <select name="service">
+      <option value="devis">Demande de devis gratuit</option>
+      <option value="info">Informations sur un service</option>
+      <option value="suivi">Suivi de chantier</option>
+      <option value="autre">Autre demande</option>
+    </select>
+    <textarea name="message"></textarea>
+  </form>
+  
+  <app-root></app-root>
+</body>
+</html>

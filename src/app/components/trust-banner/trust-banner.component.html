@@ -1,0 +1,14 @@
+<section id="trust-banner" class="section-container bg-slate-50" aria-labelledby="trust-title">
+  <h2 id="trust-title" class="section-title text-center">Pourquoi nous choisir ?</h2>
+  <div class="flex flex-col md:flex-row gap-8 justify-center items-center md:items-stretch">
+    <div 
+      *ngFor="let point of trustPoints" 
+      class="flex flex-col items-center text-center max-w-sm">
+      <div class="w-16 h-16 bg-fna-warm rounded-full flex items-center justify-center mb-4">
+        <span class="text-white text-2xl font-bold">{{ point.icon }}</span>
+      </div>
+      <h3 class="text-xl font-semibold text-fna-charcoal mb-2">{{ point.title }}</h3>
+      <p class="text-fna-slate">{{ point.description }}</p>
+    </div>
+  </div>
+</section>

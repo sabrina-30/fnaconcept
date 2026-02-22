@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-fna-charcoal: #2d3748;
+  --color-fna-slate: #64748b;
+  --color-fna-warm: #d97706;
+  
+  --font-family-sans: Inter, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-family-sans);
+    color: var(--color-fna-charcoal);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-fna-warm text-white px-6 py-3 rounded-lg font-semibold 
+           hover:bg-opacity-90 transition-all duration-300 
+           focus:outline-none focus:ring-2 focus:ring-fna-warm focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-fna-warm text-fna-warm px-6 py-3 rounded-lg font-semibold 
+           hover:bg-fna-warm hover:text-white transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-fna-warm focus:ring-offset-2;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-fna-charcoal mb-8;
+  }
+}
+
+/* Focus visible styles */
+*:focus-visible {
+  @apply outline-none ring-2 ring-fna-warm ring-offset-2;
+}
+
+/* Skip to main content link */
+.skip-to-main {
+  @apply absolute -top-full left-0 bg-fna-warm text-white px-4 py-2 
+         focus:top-0 z-50 transition-all;
+}

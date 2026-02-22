@@ -1,0 +1,49 @@
+<section id="contact" class="section-container bg-slate-50" aria-labelledby="contact-title">
+  <h2 id="contact-title" class="section-title text-center">Contact</h2>
+  
+  <!-- Responsive two-column layout: desktop (info | form), mobile (stacked) -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+    
+    <!-- Contact Information (left column on desktop, above on mobile) -->
+    <div class="space-y-6">
+      <div>
+        <h3 class="text-xl font-semibold text-fna-charcoal mb-4">Nos coordonnées</h3>
+        
+        <!-- Address -->
+        <div class="mb-4">
+          <h4 class="text-sm font-medium text-fna-slate mb-2">Adresse</h4>
+          <p class="text-fna-charcoal">{{ contactInfo.address }}</p>
+        </div>
+        
+        <!-- Email Addresses -->
+        <div class="mb-4">
+          <h4 class="text-sm font-medium text-fna-slate mb-2">E-mail</h4>
+          <div class="space-y-1">
+            <a 
+              *ngFor="let email of contactInfo.emails" 
+              [href]="'mailto:' + email"
+              class="block text-fna-warm hover:opacity-80 transition-all duration-300">
+              {{ email }}
+            </a>
+          </div>
+        </div>
+        
+        <!-- Phone Number -->
+        <div class="mb-4">
+          <h4 class="text-sm font-medium text-fna-slate mb-2">Téléphone</h4>
+          <a 
+            [href]="'tel:' + contactInfo.phone"
+            class="text-fna-warm hover:opacity-80 transition-all duration-300">
+            {{ contactInfo.phone }}
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Contact Form (right column on desktop, below on mobile) -->
+    <div>
+      <app-contact-form></app-contact-form>
+    </div>
+    
+  </div>
+</section>

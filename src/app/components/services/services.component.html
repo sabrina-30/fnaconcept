@@ -1,0 +1,9 @@
+<section id="services" class="section-container" aria-labelledby="services-title">
+  <h2 id="services-title" class="section-title text-center">Nos Services</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <app-service-card 
+      *ngFor="let service of services" 
+      [service]="service">
+    </app-service-card>
+  </div>
+</section>

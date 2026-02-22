@@ -1,0 +1,93 @@
+# Netlify Configuration for FNA Concept Website
+
+[build]
+  # Build command to run
+  command = "npm run build"
+  
+  # Directory to publish (Angular output directory)
+  publish = "dist/fna-concept-website/browser"
+
+# Environment variables for build
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA redirect rule - redirect all requests to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent clickjacking attacks
+    X-Frame-Options = "DENY"
+    
+    # Prevent MIME type sniffing
+    X-Content-Type-Options = "nosniff"
+    
+    # Enable XSS protection
+    X-XSS-Protection = "1; mode=block"
+    
+    # Referrer policy for privacy
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Content Security Policy (adjust as needed)
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'"
+
+# Cache control for JavaScript files (with hash for cache busting)
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache control for CSS files (with hash for cache busting)
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache control for images
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache control for fonts
+[[headers]]
+  for = "/*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache control for favicon
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Cache control for index.html (no caching to ensure fresh content)
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
