@@ -7,28 +7,28 @@
     scroll-behavior: smooth;
   }
   body {
-    font-family: Inter, system-ui, sans-serif;
+    font-family: "Open Sans", Roboto, sans-serif;
     @apply text-fna-charcoal;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-fna-warm text-white px-6 py-3 rounded-lg font-semibold 
-           hover:bg-opacity-90 transition-all duration-300 
+    @apply bg-fna-warm text-white px-6 py-3 rounded-lg font-semibold
+           hover:bg-opacity-90 transition-all duration-300
            focus:outline-none focus:ring-2 focus:ring-fna-warm focus:ring-offset-2;
   }
-  
+
   .btn-secondary {
-    @apply border-2 border-fna-warm text-fna-warm px-6 py-3 rounded-lg font-semibold 
+    @apply border-2 border-fna-warm text-fna-warm px-6 py-3 rounded-lg font-semibold
            hover:bg-fna-warm hover:text-white transition-all duration-300
            focus:outline-none focus:ring-2 focus:ring-fna-warm focus:ring-offset-2;
   }
-  
+
   .section-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16;
   }
-  
+
   .section-title {
     @apply text-3xl md:text-4xl font-bold text-fna-charcoal mb-8;
   }
@@ -41,6 +41,6 @@
 
 /* Skip to main content link */
 .skip-to-main {
-  @apply absolute -top-full left-0 bg-fna-warm text-white px-4 py-2 
+  @apply absolute -top-full left-0 bg-fna-warm text-white px-4 py-2
          focus:top-0 z-50 transition-all;
 }

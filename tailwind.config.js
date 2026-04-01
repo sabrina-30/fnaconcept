@@ -6,10 +6,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'fna-charcoal': '#2d3748',
+        'fna-charcoal': '#1A2B3C',
         'fna-slate': '#64748b',
-        'fna-warm': '#d97706',
-      }
+        'fna-warm': '#B85D38',
+        'fna-blanc-casse':'#F8F9FA',
+        'fna-gris-perle':'#E2E8F0',
+      },
+      fontFamily: {
+        'fna-title': ['"Montserrat"', 'Playfair'],
+        'fna-body': ['"Open Sans"', 'Roboto']
+      },
     },
   },
   plugins: [],

@@ -2,8 +2,15 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
-      <div class="flex-shrink-0">
-        <button 
+      <div class="flex-shrink-0 flex items-center gap-3">
+
+        <img
+          [src]="'logo.jpg'"
+          [alt]="'FNA Concept'"
+          class="object-cover h-12 w-12 rounded-full"
+          loading="lazy"
+        >
+        <button
           (click)="navigateToSection('hero')"
           class="text-2xl font-bold text-fna-charcoal hover:text-fna-warm transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-fna-warm focus:ring-offset-2 rounded">
           FNA Concept
@@ -50,7 +57,7 @@
   </div>
 
   <!-- Mobile Menu Panel -->
-  <div 
+  <div
     *ngIf="mobileMenuOpen"
     class="md:hidden bg-white border-t border-gray-200">
     <div class="px-4 pt-2 pb-4 space-y-2">
