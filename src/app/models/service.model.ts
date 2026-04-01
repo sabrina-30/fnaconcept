@@ -36,7 +36,7 @@ export const services: Service[] = [
   {
     id: 'menuiserie',
     name: 'Menuiserie',
-    description: 'Pose de cuisine et placard et solution sur mesure.',
+    description: 'Pose de cuisine, placard et solutions sur mesure.',
     imageUrl: '/menuiserie2.jpg'
   }
 ];
